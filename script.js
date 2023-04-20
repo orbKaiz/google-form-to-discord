@@ -16,7 +16,7 @@ function onSubmit(resolve) {
 
   resolve.response.getItemResponses().forEach(function(comeback) {
     let val = comeback.getResponse() || 'None'
-    discord_embed.embeds[0].fields.push({ name: comeback.getItem().getTitle(), value: val })
+    discordEmbed.embeds[0].fields.push({ name: comeback.getItem().getTitle(), value: val })
   })
 
   UrlFetchApp.fetch(discordWebhook, {
